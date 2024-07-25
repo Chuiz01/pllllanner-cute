@@ -1,0 +1,139 @@
+/* Reset margin, padding, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container styling */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f1a1c2, #e21a7e);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the checklists horizontally */
+}
+
+/* Checklist styling */
+.checklist {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 10px 0; /* Reduced margin to ensure they are closer together */
+    padding: 20px 20px 40px; /* Reduced padding */
+    border-radius: 10px;
+}
+
+/* Checklist header styling */
+.checklist h2 {
+    color: palevioletred;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Row styling */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: papayawhip;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 15px; /* Adjusted margin-bottom for spacing */
+}
+
+/* Input styling */
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    margin-right: 10px; /* Adjusted margin-right for spacing */
+}
+
+/* Button styling */
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #f166a0;
+    color: aliceblue;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+/* List container and items styling */
+.checklist ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* List item styling */
+.checklist ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* List item checkbox styling */
+.checklist ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('checklist/unchecked.jpg');
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+/* Checked list item styling */
+.checklist ul li.checked {
+    color: rgb(245, 169, 178);
+    text-decoration: line-through;
+}
+
+/* Checked checkbox styling */
+.checklist ul li.checked::before {
+    background-image: url('checklist/check.png');
+}
+
+/* Span (delete) button styling */
+.checklist ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: rgb(160, 67, 78);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+/* Span hover styling */
+.checklist ul li span:hover {
+    background: #f3d1df;
+}
+
+/* Delete checklist button styling */
+.delete-checklist {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
